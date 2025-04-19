@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#buttons > button {
+    border: solid;
+    background-color: transparent;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 0px;
+    border-radius: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+#buttons > button:nth-child(1) {
+    border-color: #009DFF;
+    width: 200px;
+}
+
+#buttons > button:nth-child(2) {
+    border-color: #15FF00;
+    width: 360px;
+}
+
+#buttons > button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
