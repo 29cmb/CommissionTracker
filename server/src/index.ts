@@ -4,7 +4,7 @@ import { config } from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 
-config();
+config({ path: path.join(__dirname, '../../.env') });
 
 const app: Express = express();
 app.use(bodyParser.json());
@@ -27,6 +27,6 @@ for (const file of apiFiles) {
     });
 }
 
-app.listen(process.env.PORT || 3001, () => {
-    console.log(`✅ | Server is running on port ${process.env.PORT || 3001}`);
+app.listen(process.env.SERVER_PORT || 3001, () => {
+    console.log(`✅ | Server is running on port ${process.env.SERVER_PORT || 3001}`);
 });
