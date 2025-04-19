@@ -29,13 +29,14 @@ export default class ElectronController extends ControllerSuper implements ICont
             webPreferences: {
                 contextIsolation: true,
             },
+            title: 'Commission Tracker',
+            icon: path.join(__dirname, '../..', 'client', 'public', 'favicon.ico'),
         });
-
-        win.setMenu(null);
 
         if (!app.isPackaged) {
             win.loadURL('http://localhost:3000');
         } else {
+            win.setMenu(null);
             win.loadFile(path.join(__dirname, '../..', 'client', 'out', 'index.html'));
         }
     }
